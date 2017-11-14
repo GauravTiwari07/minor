@@ -7,8 +7,7 @@ from datetime import timedelta
 from django.utils import timezone
 from project3.settings import *
 from imgurpython import ImgurClient
-def p(request):
-    return render(request, 'pricing.html')
+
 def signup_view(request):
     if request.method == "POST":
         form = SignUpForm(request.POST)
@@ -21,6 +20,7 @@ def signup_view(request):
             user = UserModel(name=name, password=make_password(password), email=email, username=username)
             user.save()
             return redirect('login/')
+
     else:
         form = SignUpForm()
 
@@ -81,6 +81,8 @@ def post_view(request):
 
 
 def feed_view(request):
+    response_data = {}
+    response_data['STATIC_URL'] = STATIC_URL
     user = check_validation(request)
     if user:
 
@@ -91,9 +93,10 @@ def feed_view(request):
             if existing_like:
                 post.has_liked = True
 
-        return render(request, 'feed.html')
+        return render(request, 'feed.html', response_data)
     else:
         return redirect('/login/')
+
 
 
 def like_view(request):
@@ -148,6 +151,28 @@ def log_out(request):
     else:
         return None
 
+def first_view(request):
+    response_data = {}
+    response_data['STATIC_URL'] = STATIC_URL
+    return render(request, 'first.html', response_data)
 
-def pricing(request):
-    return render(request, 'pricing.html')
+def sec_view(request):
+    response_data = {}
+    response_data['STATIC_URL'] = STATIC_URL
+    return render(request, 'login.html', response_data)
+
+def third_view(request):
+    response_data = {}
+    response_data['STATIC_URL'] = STATIC_URL
+    return render(request, 'signup.html', response_data)
+
+
+def rest_view(request):
+    response_data = {}
+    response_data['STATIC_URL'] = STATIC_URL
+    return render(request, 'rest.html', response_data)
+def food_view(request):
+    response_data = {}
+    response_data['STATIC_URL'] = STATIC_URL
+    return render(request, 'food.html', response_data)
+

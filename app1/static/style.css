@@ -3996,4 +3996,10 @@ img.alignright {
   float: right;
   margin: 10px 0 10px 20px; }
 
+
+.logo{
+    max-height: 70px;
+    
+}
+
 /*# sourceMappingURL=style.css.map */

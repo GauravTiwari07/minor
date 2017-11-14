@@ -12,15 +12,15 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700%7CLato:300,400,400i,700' rel='stylesheet'>
 
   <!-- Css -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/font-icons.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="{{STATIC_URL}}bootstrap.min.css" />
+  <link rel="stylesheet" href="{{STATIC_URL}}font-icons.css" />
+  <link rel="stylesheet" href="{{STATIC_URL}}style.css" />
 
   <!-- Favicons -->
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+  <link rel="shortcut icon" href="{{STATIC_URL}}favicon.ico">
+  <link rel="apple-touch-icon" href="{{STATIC_URL}}apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{STATIC_URL}}apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{STATIC_URL}}apple-touch-icon-114x114.png">
 
 </head>
 
@@ -46,7 +46,7 @@
               <!-- Logo -->
               <div class="logo-wrap">
                 <a href="index.html" class="logo__link">
-                  <img class="logo logo--dark" src="img/logo_dark.png" alt="logo">
+                  <img class="logo logo--dark" src="{{STATIC_URL}}logo_dark.png" alt="logo">
                 </a>
               </div>
 
@@ -115,12 +115,12 @@
           <div class="row row-60 items-grid">
 
             <div class="col-md-4 col-xs-6 col-xxs-12">
-              <a href="food.html" class="box-shadow">
+              <a href="food" class="box-shadow">
                 <div class="feature-1__icon-holder feature-1__icon-holder--blue text-center">
                   <i class="ui-designer-cup feature-1__icon"></i>
                 </div>
                 <div class="feature-1__base">
-                  <h3 class="feature-1__title">Restraunt Name</h3>
+                  <h3 class="feature-1__title">Restraunt Name</h3><a href="food"></a>
                   <p class="feature-1__paragraph">Desc</p>
                   <p class="feature-1__paragraph">Rating</p>
                 </div>
@@ -186,8 +186,8 @@
                 </div>
                  <div class="feature-1__base">
                   <h3 class="feature-1__title">Restraunt Name</h3>
-                  <p class="feature-1__paragraph">Desc</p>
-                  <p class="feature-1__paragraph">Rating</p>
+                  <p class="feature-1__paragraph">description</p>
+                  <p class="feature-1__paragraph"></p>
                 </div>
               </a>
             </div> <!-- end col -->
@@ -205,7 +205,7 @@
 
               <div class="col-md-4 col-sm-3 col-xs-12">
                 <div class="widget footer__about-us">
-                  <img src="img/logo_dark.png" alt="" class="logo">
+
                   <div class="footer__socials mt-40">
                     <div class="social-icons social-icons--nobase">
                       <a href="#"><i class="ui-twitter"></i></a>
@@ -276,10 +276,10 @@
   </main> <!-- end main wrapper -->
 
   <!-- jQuery Scripts -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/plugins.js"></script>
-  <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="{{STATIC_URL}}jquery.min.js"></script>
+  <script type="text/javascript" src="{{STATIC_URL}}bootstrap.min.js"></script>
+  <script type="text/javascript" src="{{STATIC_URL}}plugins.js"></script>
+  <script type="text/javascript" src="{{STATIC_URL}}scripts.js"></script>
 
 </body>
 </html>

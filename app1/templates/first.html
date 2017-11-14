@@ -12,15 +12,15 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700%7CLato:300,400,400i,700' rel='stylesheet'>
 
   <!-- Css -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/font-icons.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="{{STATIC_URL}}bootstrap.min.css" />
+  <link rel="stylesheet" href="{{STATIC_URL}}font-icons.css" />
+  <link rel="stylesheet" href="{{STATIC_URL}}style.css" />
 
   <!-- Favicons -->
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+  <link rel="shortcut icon" href="{{STATIC_URL}}favicon.ico">
+  <link rel="apple-touch-icon" href="{{STATIC_URL}}apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{STATIC_URL}}apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{STATIC_URL}}apple-touch-icon-114x114.png">
 
 </head>
 
@@ -34,7 +34,6 @@
   </div>
 
   <main class="main-wrapper">
-
     <!-- Navigation -->
     <header class="nav nav--transparent">
 
@@ -46,8 +45,7 @@
               <!-- Logo -->
               <div class="logo-wrap">
                 <a href="index.html" class="logo__link">
-                  <img class="logo logo--dark" src="img/logo_dark.png" alt="logo">
-                  <img class="logo logo--light" src="img/logo_light.png" alt="logo">
+                  <img class="logo logo--light" src="{{STATIC_URL}}logo_light.png" alt="logo">
                 </a>
               </div>
 
@@ -103,12 +101,12 @@
             <div class="col-md-5">
               <h1 class="hero__title hero--boxed">New platform for Finding Restaurants</h1>
               <div class="hero__btn-holder mt-30">
-                <a href="login.html" class="btn btn--lg btn--color rounded"><span>Login</span></a>
-                <a href="signup.html" class="btn btn--lg btn--color rounded"><span>Sign Up</span></a>
+                <a href="login.html" class="btn btn--lg btn--color rounded"><span><a href="login">Login</span></a>
+                <a href="signup.html" class="btn btn--lg btn--color rounded"><span><a href="signup">Sign Up</span></a>
               </div>
             </div>
             <div class="col-md-7 text-right hidden-sm hidden-xs">
-              <img src="img/hero/app.jpg" class="mt-100" alt="">
+              <img src="{{STATIC_URL}}app.jpg" class="mt-100" alt="">
             </div>
           </div>
 
@@ -122,28 +120,28 @@
 
             <div class="col-sm-5ths col-xs-3 col-xxs-6">
               <a href="#">
-                <img src="img/partners/partner_logo_dark_1.png" alt="">
+                <img src="{{STATIC_URL}}partner_logo_dark_1.png" alt="">
               </a>
             </div>
             <div class="col-sm-5ths col-xs-3 col-xxs-6">
               <a href="#">
-                <img src="img/partners/partner_logo_dark_2.png" alt="">
+                <img src="{{STATIC_URL}}partner_logo_dark_2.png" alt="">
               </a>
             </div>
             <div class="col-sm-5ths col-xs-3 col-xxs-6">
               <a href="#">
-                <img src="img/partners/partner_logo_dark_3.png" alt="">
+                <img src="{{STATIC_URL}}partners/partner_logo_dark_3.png" alt="">
               </a>
             </div>
             <div class="col-sm-5ths col-xs-3 col-xxs-6">
               <a href="#">
-                <img src="img/partners/partner_logo_dark_4.png" alt="">
+                <img src="{{STATIC_URL}}partner_logo_dark_4.png" alt="">
               </a>
             </div>
 
             <div class="col-sm-5ths hidden-xs">
               <a href="#">
-                <img src="img/partners/partner_logo_dark_5.png" alt="">
+                <img src="{{STATIC_URL}}partner_logo_dark_5.png" alt="">
               </a>
             </div>
 
@@ -195,7 +193,7 @@
               </div>
             </div>
             <div class="col-md-6 col-md-offset-1 col-sm-12">
-              <img src="img/promo/2.png" alt="" class="promo-section__img">
+              <img src="i{{STATIC_URL}}2.png" alt="" class="promo-section__img">
             </div>
           </div>
         </div>
@@ -212,7 +210,7 @@
 
               <div class="col-md-4 col-sm-3 col-xs-12">
                 <div class="widget footer__about-us">
-                  <img src="img/logo_dark.png" alt="" class="logo">
+
                   <div class="footer__socials mt-40">
                     <div class="social-icons social-icons--nobase">
                       <a href="#"><i class="ui-twitter"></i></a>
@@ -284,10 +282,10 @@
 
 
   <!-- jQuery Scripts -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/plugins.js"></script>
-  <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="{{STATIC_URL}}jquery.min.js"></script>
+  <script type="text/javascript" src="{{STATIC_URL}}bootstrap.min.js"></script>
+  <script type="text/javascript" src="{{STATIC_URL}}plugins.js"></script>
+  <script type="text/javascript" src="{{STATIC_URL}}scripts.js"></script>
 
 </body>
 </html>
