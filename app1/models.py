@@ -21,7 +21,6 @@ class SessionToken(models.Model):
     def create_token(self):
         self.session_token = uuid.uuid4()
 
-
 class PostModel(models.Model):
     user = models.ForeignKey(UserModel)
     image = models.FileField(upload_to='user_images')
@@ -38,6 +37,7 @@ class PostModel(models.Model):
     @property
     def comments(self):
         return CommentModel.objects.filter(post=self).order_by('-created_on')
+
 
 
 class LikeModel(models.Model):

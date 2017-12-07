@@ -24,7 +24,7 @@ def signup_view(request):
     else:
         form = SignUpForm()
 
-    return render(request, 'index.html', {'form': form, 'STATIC_URL': STATIC_URL})
+    return render(request, 'signup.html', {'form': form, 'STATIC_URL': STATIC_URL})
 
 
 def login_view(request):
@@ -64,14 +64,17 @@ def post_view(request):
                 image = form.cleaned_data.get('image')
                 caption = form.cleaned_data.get('caption')
                 post = PostModel(user=user, image=image, caption=caption)
-                post.save()
-
+                if post.save():
+                    print("Line 68")
                 path = str(post.image.url)
-
+                print (path)
+                print("I am at lin 70")
                 client = ImgurClient("c62b00a7ad546c3", "9fb1bfb6016f30f0d7123164ad8cb3d3669036f2")
                 post.image_url = client.upload_from_path(path, config=None, anon=True)['link']
-                post.save()
-                return redirect('/feed/')
+                print(post.image_url)
+                if post.save():
+                    print(" I am at line 74")
+                return redirect('/feed/rest/food/')
 
         else:
             form = PostForm()
@@ -122,11 +125,13 @@ def comment_view(request):
         if form.is_valid():
             post_id = form.cleaned_data.get('post').id
             comment_text = form.cleaned_data.get('comment_text')
+            print(comment_text)
+            print("Hello")
             comment = CommentModel.objects.create(user=user, post_id=post_id, comment_text=comment_text)
             comment.save()
-            return redirect('/feed/')
+            return redirect('/feed/rest/food/')
         else:
-            return redirect('/feed/')
+            return redirect('/feed/rest/food/')
     else:
         return redirect('/login')
 
@@ -175,4 +180,27 @@ def food_view(request):
     response_data = {}
     response_data['STATIC_URL'] = STATIC_URL
     return render(request, 'food.html', response_data)
-
+def loc_view(request):
+    response_data = {}
+    response_data['STATIC_URL'] = STATIC_URL
+    return render(request, 'success.html', response_data)
+def loc_view(request):
+    response_data = {}
+    response_data['STATIC_URL'] = STATIC_URL
+    return render(request, 'success.html', response_data)
+def log_view(request):
+    response_data = {}
+    response_data['STATIC_URL'] = STATIC_URL
+    return render(request, 'login.html', response_data)
+def home_view(request):
+    response_data = {}
+    response_data['STATIC_URL'] = STATIC_URL
+    return render(request, 'first.html', response_data)
+def icons_view(request):
+    response_data = {}
+    response_data['STATIC_URL'] = STATIC_URL
+    return render(request, 'index-2.html', response_data)
+def know_view(request):
+    response_data = {}
+    response_data['STATIC_URL'] = STATIC_URL
+    return render(request, 'knowledge-base.html', response_data)

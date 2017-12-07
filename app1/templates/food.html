@@ -64,7 +64,10 @@
                 <li class="nav__dropdown">
                   <a href="index.html">Home</a>
                   <i class="ui-arrow-down nav__dropdown-trigger"></i>
-
+                   <form method="post" action="/post/" style="float: left;">
+                  {% csrf_token %}
+                   <input type="submit" value="Create Post" class="button">
+                   </form>
                 </li>
                 <li class="active">
                   <a href="features.html">Features</a>
@@ -113,17 +116,30 @@
          <section class="section-wrap pt-70 pb-130 bg-light">
         <div class="container">
           <div class="row row-60 items-grid">
-
+           {% for post in posts reversed %}
+            <div class="header">
+                <h4> Posted by: {{ post.user.username }} </h4>
+                <p>[{{ post.created_on }}]</p></div>
+            <div class="imagearea">
+                <div class="img_capt">
+                    <img style="width:350px; height:300px;"src="{{ post.image_url }}" />
+                    <div class="captionarea">
+                        {{ post.caption }}
+                      {% endfor %}
+                    </div>
+                </div>
             <div class="col-md-4 col-xs-6 col-xxs-12">
               <a href="#" class="box-shadow">
                 <div class="feature-1__icon-holder feature-1__icon-holder--blue text-center">
                   <i class="ui-designer-cup feature-1__icon"></i>
                 </div>
+                  {% for post in posts reversed %}
                 <div class="feature-1__base">
-                  <h3 class="feature-1__title">Food Name</h3>
+                  <h3 class="feature-1__title">{{ post.user.username }}</h3>
                   <p class="feature-1__paragraph">Desc</p>
                   <p class="feature-1__paragraph">Rating</p>
                 </div>
+                  {% endfor %}
               </a>
             </div> <!-- end col -->
 

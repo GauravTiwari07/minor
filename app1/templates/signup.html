@@ -13,15 +13,15 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
   <!-- Css -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/font-icons.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="{{STATIC_URL}}bootstrap.min.css" />
+  <link rel="stylesheet" href="{{STATIC_URL}}font-icons.css" />
+  <link rel="stylesheet" href="{{STATIC_URL}}style.css" />
 
   <!-- Favicons -->
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+  <link rel="shortcut icon" href="{{STATIC_URL}}favicon.ico">
+  <link rel="apple-touch-icon" href="{{STATIC_URL}}apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{STATIC_URL}}apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{STATIC_URL}}apple-touch-icon-114x114.png">
 
 </head>
 
@@ -47,7 +47,7 @@
               <!-- Logo -->
               <div class="logo-wrap">
                 <a href="index.html" class="logo__link">
-                  <img class="logo logo--dark" src="img/logo_dark.png" alt="logo">
+                  <img class="logo logo--dark" src="{{STATIC_URL}}logo_dark.png" alt="logo">
                 </a>
               </div>
 
@@ -102,7 +102,7 @@
 
           <div class="switcher flex-horizontal-align-center text-center">
             <span class="switcher-btn active" id="month">Signup</span>
-            <a href="login.html"><span class="switcher-btn" id="year">LogIn</span></a>
+            <a href="login/"><span class="switcher-btn" id="year">LogIn</span></>
           </div>
 
           <div class="row flex-parent flex-md-collapse no-gutters mt-90">
@@ -152,18 +152,9 @@
   							</div>
   						</div>
 
-  						<div class="form-group">
-  							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
-  							<div class="cols-sm-10">
-  								<div class="input-group">
-  									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-  									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
-  								</div>
-  							</div>
-  						</div>
 
   						<div class="form-group ">
-  							<a href="#" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Login</a>
+  							<a href="login" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Login</a>
   						</div>
 
   					</form>
@@ -255,10 +246,10 @@
   </main> <!-- end main wrapper -->
 
   <!-- jQuery Scripts -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/plugins.js"></script>
-  <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="{{STATIC_URL}}jquery.min.js"></script>
+  <script type="text/javascript" src="{{STATIC_URL}}bootstrap.min.js"></script>
+  <script type="text/javascript" src="{{STATIC_URL}}plugins.js"></script>
+  <script type="text/javascript" src="{{STATIC_URL}}scripts.js"></script>
 
 </body>
 </html>
